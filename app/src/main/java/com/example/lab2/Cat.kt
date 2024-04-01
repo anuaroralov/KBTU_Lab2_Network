@@ -1,7 +1,10 @@
 package com.example.lab2
 
+import android.os.Parcelable
 import com.example.kbtu_lab2_network.network.CatDto
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class Cat(
     var length: String? = null,
     var origin: String? = null,
@@ -19,7 +22,7 @@ data class Cat(
     var minLifeExpectancy: Int? = null,
     var maxLifeExpectancy: Int? = null,
     var name: String? = null
-)
+) : Parcelable
 
 internal fun CatDto.toCat(): Cat = Cat(
     length = this.length,

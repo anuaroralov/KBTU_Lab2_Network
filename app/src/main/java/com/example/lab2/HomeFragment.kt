@@ -40,7 +40,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        listAdapter = MyListAdapter(requireContext()) {}
+        listAdapter = MyListAdapter(requireContext()) {launchDetailFragment(it)}
 
         binding.recyclerView.apply {
             setHasFixedSize(true)
@@ -97,6 +97,10 @@ class HomeFragment : Fragment() {
 
     private fun launchFilterFragment() {
         findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToFilterFragment())
+    }
+
+    private fun launchDetailFragment(cat:Cat) {
+        findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToDetailFragment(cat))
     }
 
 }
