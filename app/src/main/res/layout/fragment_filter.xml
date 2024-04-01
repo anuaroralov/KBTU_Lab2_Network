@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FilterFragment">
+
+    <TextView
+        android:id="@+id/textViewWeight"
+        style="@style/MyTextViewStyle"
+        android:text="Weight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWeight">
+
+        <EditText
+            android:id="@+id/editTextWeightMinValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/view_background"
+            android:hint="From"
+            android:inputType="number"
+            android:padding="8dp"
+            android:textColorHint="#BDBDBD"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#BDBDBD" />
+
+        <EditText
+            android:id="@+id/editTextWeightMaxValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/view_background"
+            android:hint="To"
+            android:inputType="number"
+            android:padding="8dp"
+            android:textColorHint="#BDBDBD"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewLifeExpectancy"
+        style="@style/MyTextViewStyle"
+        android:text="Life expectancy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutWeight" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutLifeExpectancy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLifeExpectancy">
+
+        <EditText
+            android:id="@+id/editTextLifeExpectancyMinValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/view_background"
+            android:hint="From"
+            android:inputType="number"
+            android:padding="8dp"
+            android:textColorHint="#BDBDBD"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#BDBDBD" />
+
+        <EditText
+            android:id="@+id/editTextLifeExpectancyMaxValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/view_background"
+            android:hint="To"
+            android:inputType="number"
+            android:padding="8dp"
+            android:textColorHint="#BDBDBD"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewPlayfulness"
+        style="@style/MyTextViewStyle"
+        android:text="Playfulness"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutLifeExpectancy" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupPlayfulness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        android:background="@drawable/view_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPlayfulness">
+
+        <RadioButton
+            android:id="@+id/radioButtonPlayfulness1"
+            style="@style/MyRadioButtonStyle"
+            android:tag="1"
+            android:text="1" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPlayfulness2"
+            style="@style/MyRadioButtonStyle"
+            android:tag="2"
+            android:text="2" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPlayfulness3"
+            style="@style/MyRadioButtonStyle"
+            android:tag="3"
+            android:text="3" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPlayfulness4"
+            style="@style/MyRadioButtonStyle"
+            android:tag="4"
+            android:text="4" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPlayfulness5"
+            style="@style/MyRadioButtonStyle"
+            android:tag="5"
+            android:text="5" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewFamilyFriendly"
+        style="@style/MyTextViewStyle"
+        android:text="Family Friendly"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupPlayfulness" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupFamilyFriendly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/view_background"
+        android:gravity="center"
+        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFamilyFriendly">
+
+        <RadioButton
+            android:id="@+id/radioButtonFamilyFriendly1"
+            style="@style/MyRadioButtonStyle"
+            android:text="1"
+            android:tag="1"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonFamilyFriendly2"
+            style="@style/MyRadioButtonStyle"
+            android:text="2"
+            android:tag="2"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonFamilyFriendly3"
+            style="@style/MyRadioButtonStyle"
+            android:text="3"
+            android:tag="3"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonFamilyFriendly4"
+            style="@style/MyRadioButtonStyle"
+            android:text="4"
+            android:tag="4"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonFamilyFriendly5"
+            style="@style/MyRadioButtonStyle"
+            android:text="5"
+            android:tag="5"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewGrooming"
+        style="@style/MyTextViewStyle"
+        android:text="Grooming"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupFamilyFriendly" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupGrooming"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/view_background"
+        android:gravity="center"
+        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGrooming">
+
+        <RadioButton
+            android:id="@+id/radioButtonGrooming1"
+            style="@style/MyRadioButtonStyle"
+            android:text="1"
+            android:tag="1"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonGrooming2"
+            style="@style/MyRadioButtonStyle"
+            android:text="2"
+            android:tag="2"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonGrooming3"
+            style="@style/MyRadioButtonStyle"
+            android:text="3"
+            android:tag="3"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonGrooming4"
+            style="@style/MyRadioButtonStyle"
+            android:text="4"
+            android:tag="4"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonGrooming5"
+            style="@style/MyRadioButtonStyle"
+            android:text="5"
+            android:tag="5"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewOtherPetsFriendly"
+        style="@style/MyTextViewStyle"
+        android:text="Other pets friendly"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupGrooming" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupOtherPetsFriendly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        android:background="@drawable/view_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOtherPetsFriendly">
+
+        <RadioButton
+            android:id="@+id/radioButtonOtherPetsFriendly1"
+            style="@style/MyRadioButtonStyle"
+            android:text="1"
+            android:tag="1"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonOtherPetsFriendly2"
+            style="@style/MyRadioButtonStyle"
+            android:text="2"
+            android:tag="2"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonOtherPetsFriendly3"
+            style="@style/MyRadioButtonStyle"
+            android:text="3"
+            android:tag="3"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonOtherPetsFriendly4"
+            style="@style/MyRadioButtonStyle"
+            android:text="4"
+            android:tag="4"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonOtherPetsFriendly5"
+            style="@style/MyRadioButtonStyle"
+            android:text="5"
+            android:tag="5"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewChildrenFriendly"
+        style="@style/MyTextViewStyle"
+        android:text="Children friendly"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupOtherPetsFriendly" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupChildrenFriendly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/view_background"
+        android:gravity="center"
+        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewChildrenFriendly">
+
+        <RadioButton
+            android:id="@+id/radioButtonChildrenFriendly1"
+            style="@style/MyRadioButtonStyle"
+            android:text="1"
+            android:tag="1"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonChildrenFriendly2"
+            style="@style/MyRadioButtonStyle"
+            android:text="2"
+            android:tag="2"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonChildrenFriendly3"
+            style="@style/MyRadioButtonStyle"
+            android:text="3"
+            android:tag="3"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonChildrenFriendly4"
+            style="@style/MyRadioButtonStyle"
+            android:text="4"
+            android:tag="4"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonChildrenFriendly5"
+            style="@style/MyRadioButtonStyle"
+            android:text="5"
+            android:tag="5"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonFilter"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/button_background"
+        android:text="Filter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
