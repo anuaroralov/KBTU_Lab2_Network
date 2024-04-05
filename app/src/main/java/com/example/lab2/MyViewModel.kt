@@ -1,5 +1,6 @@
 package com.example.lab2
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -41,7 +42,7 @@ class MyViewModel : ViewModel() {
                     )
                     _cats.value = response.map { it.toCat() }
                 } catch (e: Exception) {
-
+                    Log.e("getCats", "Error- ", e)
                 }
             }
         }

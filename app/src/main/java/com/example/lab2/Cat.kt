@@ -17,10 +17,10 @@ data class Cat(
     var grooming: Int? = null,
     var intelligence: Int? = null,
     var otherPetsFriendly: Int? = null,
-    var minWeight: Int? = null,
-    var maxWeight: Int? = null,
-    var minLifeExpectancy: Int? = null,
-    var maxLifeExpectancy: Int? = null,
+    var minWeight: Float? = null,
+    var maxWeight: Float? = null,
+    var minLifeExpectancy: Float? = null,
+    var maxLifeExpectancy: Float? = null,
     var name: String? = null
 ) : Parcelable
 

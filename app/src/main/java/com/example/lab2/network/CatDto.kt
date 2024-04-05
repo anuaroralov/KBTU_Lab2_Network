@@ -14,10 +14,10 @@ data class CatDto(
     @SerializedName("grooming") var grooming: Int? = null,
     @SerializedName("intelligence") var intelligence: Int? = null,
     @SerializedName("other_pets_friendly") var otherPetsFriendly: Int? = null,
-    @SerializedName("min_weight") var minWeight: Int? = null,
-    @SerializedName("max_weight") var maxWeight: Int? = null,
-    @SerializedName("min_life_expectancy") var minLifeExpectancy: Int? = null,
-    @SerializedName("max_life_expectancy") var maxLifeExpectancy: Int? = null,
+    @SerializedName("min_weight") var minWeight: Float? = null,
+    @SerializedName("max_weight") var maxWeight: Float? = null,
+    @SerializedName("min_life_expectancy") var minLifeExpectancy: Float? = null,
+    @SerializedName("max_life_expectancy") var maxLifeExpectancy: Float? = null,
     @SerializedName("name") var name: String? = null
 )
 
